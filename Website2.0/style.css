@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0b1120;
+    color: white;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00aaff;
+}
+
+.logo span {
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn {
+    background: #ff0077;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar */
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #00aaff;
+}
+
+.content h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Fixed Button Alignment */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Skills */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    background: #ff0077;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Projects */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+}
+/* Centering All Section Headings */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00aaff;
+}
+/* Centering and Justifying the About Me Section */
+.about p {
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;/* Make the First Section (Hero) Full-Screen */
+    .hero {
+        height: 100vh;  /* Takes full viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Ensure About Me and Other Sections Appear Below */
+    .about, .skills, .projects {
+        padding: 80px 10%;
+        min-height: 100vh;  /* Makes scrolling smoother */
+        background-color: #111;  /* Adjust color as needed */
+    }
+    
+    /* Smooth Scrolling Effect */
+    html {
+        scroll-behavior: smooth;
+    }
+    /* Full-Screen Hero Section */
+.hero {
+    height: 100vh;  /* Takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+    color: white;
+}
+
+/* About Me Section (Appears After Scrolling) */
+.about {
+    height: 100vh;  /* Also full-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: #111;  /* Dark background */
+    color: white;
+}
+
+/* Center and Justify About Me Content */
+.about p {
+    text-align: justify;
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+}
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Section Styling */
+.about, .skills, .projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: white;
+    opacity: 0;  /* Initially hidden */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* About Me Text */
+.about p {
+    text-align: justify;
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Skills Section Styling */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Projects Section */
+.project-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(255, 165, 0, 0.4);
+}
